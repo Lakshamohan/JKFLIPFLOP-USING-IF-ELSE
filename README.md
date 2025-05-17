@@ -49,7 +49,7 @@ step-6 Run the program.
 **PROGRAM**
 
 Developed by: RegisterNumber: 212224220050
-
+```
 module JK(q, qb,j,k,clock,reset);
     input j,k,clock,reset;
     output reg q, qb;
@@ -82,7 +82,7 @@ else
 	  end
  end
  endmodule
- 
+ ```
 **RTL LOGIC FOR FLIPFLOPS**
 
 ![Screenshot 2025-05-17 204213](https://github.com/user-attachments/assets/1562d20d-7caf-40c1-8ada-6f06ef46ce70)
