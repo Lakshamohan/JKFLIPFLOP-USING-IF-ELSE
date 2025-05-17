@@ -56,7 +56,7 @@ module JK(q, qb,j,k,clock,reset);
 always @ (posedge (clock))
 
    begin 
-       if (!reset)
+       	if (!reset)
            begin
               q <= q;
               qb <=qb;
@@ -64,21 +64,21 @@ always @ (posedge (clock))
         
 else
    begin
-		     if(j==0&&k==0)
-			        begin
-			        q<=q;
-			        qb<=qb;
-			        end
-		     else if(j!=k)
-		       	 begin
-			        q<=j;
-			        qb<=k;
-			        end
-		     else if(j==1&&k==1)
-			        begin
-			        q<=~q;
-			        qb<=~qb;
-			        end
+	if(j==0&&k==0)
+           begin
+              q<=q;
+              qb<=qb;
+	      end
+	else if(j!=k)
+	      begin
+	      q<=j;
+	      qb<=k;
+	      end
+	else if(j==1&&k==1)
+	      begin
+	      q<=~q;
+	      qb<=~qb;
+	      end
 	  end
  end
  endmodule
